@@ -2,27 +2,34 @@ body {
 
     background-image: url(https://cdn.pixabay.com/photo/2016/06/05/07/59/stars-1436950_960_720.jpg);
     background-size: auto;
+   }
 
+main { 
+    
 }
-
-main {
+.text {
     color: yellow;
     text-align: center;
-    animation: scroll 60s linear
-
+    position: absolute;
+    animation: scroll 20s linear 0s infinite;
+    transform: perspective(500px) rotateX(40deg);;
 }
-
 header {
     font-size: 80px;
-    color: blue;
+    color: rgb(38, 38, 236);
     margin: 20px;
 
 }
 
-.title {
+.Episode {
     font-size: 90px;
     margin: 20px;
     
+}
+
+article {
+    font-size: medium;
+    margin:20px;
 }
 
 
@@ -34,11 +41,13 @@ img {
 }
 
 
-
 @keyframes scroll {
-    0% {transform: translateY(800px) perspective(80px) rotateX(0deg);
+    0% {top:100%;    
+       
     }
-    100% {transform: translateY(-800px) perspective(150px) rotateX(30deg);
+  
+    100% {top:-100%; ;
+       
     }
 }
 
@@ -49,10 +58,10 @@ img {
     }
 
     60% {
-        transform: scale(1);
+        transform: scale(3);
         opacity: 1;
     }
 
     100% {
-        transform: scale(1);
+        transform: scale(1);}
     }
